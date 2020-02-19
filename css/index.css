@@ -1,1 +1,317 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  background-color: #bc9055;
+}
+@media (max-width: 500px) {
+  .container {
+    background-color: #bc9055;
+  }
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.nav_pic {
+  width: 50%;
+  height: 40%;
+}
+.nav_bar {
+  margin-left: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.first_sect {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 70%;
+  height: 60%;
+  margin-top: 20%;
+  margin-left: 8%;
+}
+@media (max-width: 500px) {
+  .first_sect {
+    width: 70%;
+    height: 60%;
+    margin-top: 20%;
+    margin-left: 8%;
+  }
+}
+.left_content {
+  margin-left: 8%;
+  margin-right: 7%;
+}
+@media (max-width: 500px) {
+  .left_content {
+    margin-left: 8%;
+    margin-right: 7%;
+  }
+}
+.name {
+  margin-top: 20px;
+  font-size: 25px;
+}
+.roll {
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+.contact_deets {
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+.contact_info {
+  margin-top: 10px;
+}
+.core {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+.core_info {
+  margin-top: 10px;
+}
+img {
+  width: 70%;
+  height: 75%;
+  margin-top: 20px;
+  text-align: left;
+  display: flex;
+  justify-content: column;
+}
+@media (max-width: 500px) {
+  .img {
+    width: 70%;
+    height: 75%;
+    margin-top: 20px;
+  }
+}
+.second_sect {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+@media (max-width: 500px) {
+  .second_sect {
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 5%;
+  }
+}
+.first_par {
+  margin-top: 20px;
+}
+.role {
+  margin-top: 20px;
+  font-size: 13px;
+  font-family: "Prompt", sans-serif;
+}
+.time_one {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.role_two {
+  margin-top: 20px;
+  font-size: 13px;
+  font-family: "Prompt", sans-serif;
+}
+.time_two {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.school_one {
+  margin-top: 10px;
+  font-size: 13px;
+  font-family: "Prompt", sans-serif;
+}
+.major_one {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.school_two {
+  margin-top: 20px;
+  font-size: 13px;
+  font-family: "Prompt", sans-serif;
+}
+.major_two {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pro_summ {
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+.work_exp {
+  margin-top: 20px;
+}
+.worx {
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+.acad_prof {
+  margin-top: 20px;
+}
+.acad_title {
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+.skill_bills {
+  margin-top: 20px;
+}
+.skills {
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+.list_four {
+  margin-top: 10px;
+}
