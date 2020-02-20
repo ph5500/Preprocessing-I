@@ -4,56 +4,381 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+//mixins below
+
+.real_marg_bot() {
+  margin-bottom: 10px;
 }
 
-html, body {
-    height: 100%;
+.margin_bot() {
+  margin-top: 10px;
 }
 
+.margin() {
+  margin-top: 20px;
+}
+
+.border() {
+  border: 4px solid black;
+  padding: 2%;
+}
+
+.para() {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.fonts() {
+  font-size: 15px;
+  font-family: "Abril Fatface", cursive;
+}
+
+.fonted() {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+
+.fontaine() {
+  font-size: 13px;
+  font-family: "Prompt", sans-serif;
+}
+//mixins above
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  background-color: #bc9055;
+} //this closes the container
+@media (max-width: 500px) {
+  .container {
+    background-color: #bc9055;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .margin_bot();
+}
+
+.nav_pic {
+  width: 50%;
+  height: 40%;
+} //this closes the nav_pic
+
+.nav_bar {
+  margin-left: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.first_sect {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 70%;
+  height: 60%;
+  margin-top: 20%;
+  margin-left: 8%;
+} //this closes the first_sect
+@media (max-width: 500px) {
+  .first_sect {
+    width: 70%;
+    height: 60%;
+    margin-top: 20%;
+    margin-left: 8%;
+  }
+}
+
+.left_content {
+  margin-left: 8%;
+  margin-right: 7%;
+} //this closes the left_content
+@media (max-width: 500px) {
+  .left_content {
+    margin-left: 8%;
+    margin-right: 7%;
+  }
+}
+
+.name {
+  .margin();
+  font-size: 25px;
+}
+
+.roll {
+  .margin_bot();
+  .fonted();
+}
+
+.contact_deets {
+  .margin_bot();
+  .fonts();
+}
+
+.contact_info {
+  .margin_bot();
+}
+
+.core {
+  .margin();
+  .fonts();
+}
+
+.core_info {
+  .margin_bot();
+}
+img {
+  width: 70%;
+  height: 75%;
+  margin-top: 20px;
+  text-align: left;
+  display: flex;
+  justify-content: column;
+} //this closes the img
+@media (max-width: 500px) {
+  .img {
+    width: 70%;
+    height: 75%;
+    margin-top: 20px;
+  }
+}
+
+.second_sect {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 5%;
+} //this closes the second_sect
+@media (max-width: 500px) {
+  .second_sect {
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 5%;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.first_par {
+  .margin();
+}
+
+.role {
+  .margin();
+  .fontaine();
+}
+
+.time_one {
+  .margin_bot();
+  .real_marg_bot();
+}
+
+.role_two {
+  .margin();
+  .fontaine();
+}
+
+.time_two {
+  .margin_bot();
+  .real_marg_bot();
+}
+
+.school_one {
+  .margin_bot();
+  .fontaine();
+}
+
+.skill_one {
+}
+
+.major_one {
+  .margin_bot();
+  .real_marg_bot();
+}
+
+.school_two {
+  .margin();
+  .fontaine();
+}
+
+.major_two {
+  .margin_bot();
+  .real_marg_bot();
+}
+
+.pro_summ {
+  .fonts();
+}
+
+.work_exp {
+  .margin();
+}
+
+.worx {
+  .fonts();
+}
+
+.acad_prof {
+  .margin();
+}
+
+.acad_title {
+  .fonts();
+}
+
+.skill_bills {
+  .margin();
+}
+
+.skills {
+  .fonts();
+}
+
+.list_four {
+  .margin_bot();
+}
